@@ -88,6 +88,41 @@ The script will perform the following steps:
 2. Search for each trending topic on Twitter.
 3. If a specific error ("denylisted") is encountered, the script will send a notification via Telegram and stop execution.
 
+# Demonization: Scheduling the Script with Crontab
+
+This guide explains how to run your `demon.py` script automatically every two hours using `crontab` on a Unix-like system.
+
+## Steps to Schedule the Script
+
+### 1. Open Crontab
+To begin, you'll need to open your crontab file in edit mode. You can do this by running the following command in your terminal:
+
+```bash
+crontab -e
+```
+
+### 2. Add the Following Line to Schedule the Script
+Add the following line at the end of the crontab file to schedule your script to run every two hours:
+
+```bash
+0 */2 * * * /usr/bin/python3 /path/to/your/script/demon.py >> /path/to/your/log/demon.log 2>&1
+```
+
+#### Explanation:
+- **`0 */2 * * *`**: This cron expression schedules the script to run every two hours at the start of the hour (e.g., 00:00, 02:00, 04:00, etc.).
+- **`/usr/bin/python3`**: This is the path to the Python 3 interpreter. Ensure that this path is correct for your system.
+- **`/path/to/your/script/demon.py`**: Replace this with the full path to your `demon.py` script.
+- **`>> /path/to/your/log/demon.log 2>&1`**: This redirects both the standard output (stdout) and the standard error (stderr) to a log file. Replace `/path/to/your/log/` with the path to the directory where you want to store the log file.
+
+### 3. Save and Exit
+After adding the line to the crontab file, save the changes and exit the editor. Your script is now scheduled to run automatically every two hours.
+
+## Additional Notes
+- **Log Rotation**: Over time, the log file can grow large. Consider setting up log rotation to manage log file size and avoid running out of disk space.
+- **Testing**: You can test the crontab entry by temporarily changing the timing to run the script every minute (`* * * * *`) and then checking if it behaves as expected.
+
+By following these steps, your script will run at regular intervals without any manual intervention, ensuring continuous operation.
+
 ## Important Notes
 
 - **Rate Limits**: The Twitter API is subject to request limits. Ensure you respect the rate limits to avoid being blocked.
