@@ -2,6 +2,8 @@
 
 This repository contains a Python script to fetch trending topics on Twitter in Italy and search each trend using the Twitter API. If specific errors, such as those related to blocked searches, are encountered, the script sends a notification via Telegram.
 
+![Logo](./logo.png)
+
 ## File Structure
 
 - **`demon.py`**: The main script that handles the entire process, from retrieving trending topics to searching Twitter and sending Telegram notifications if specific errors occur.
