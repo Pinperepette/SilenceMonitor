@@ -1,0 +1,34 @@
+{
+    "cookies": {
+        "guest_id": "",  // Twitter guest ID (e.g., "v1%3A169635946273467053")
+        "night_mode": "",  // Night mode preference (e.g., "0" for off, "1" for on)
+        "twid": "",  // Twitter user ID encoded (e.g., "u%3D174553974")
+        "auth_token": "",  // Twitter authentication token
+        "ct0": "",  // CSRF token for Twitter
+        "d_prefs": "",  // Twitter preference settings
+        "guest_id_ads": "",  // Guest ID for ads (same as guest_id)
+        "guest_id_marketing": "",  // Guest ID for marketing (same as guest_id)
+        "personalization_id": "",  // Personalization ID for Twitter (e.g., "\"v1_R3M5M985L3hi8X3TKxe6YA==\"")
+        "_ga": "",  // Google Analytics ID used by Twitter
+        "lang": ""  // Language preference (e.g., "it" for Italian)
+    },
+    "headers": {
+        "User-Agent": "",  // User-Agent string of your browser (e.g., "Mozilla/5.0...")
+        "Accept": "*/*",  // Accepted content types (usually leave as "*/*")
+        "Accept-Language": "",  // Language preference for your requests (e.g., "it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3")
+        "Referer": "",  // Referrer URL (e.g., "https://x.com/search?q=test&src=recent_search_click")
+        "content-type": "application/json",  // Content type for the request
+        "x-twitter-auth-type": "OAuth2Session",  // Authorization type (usually "OAuth2Session")
+        "x-csrf-token": "",  // CSRF token to prevent request forgery
+        "x-twitter-client-language": "",  // Client language setting (e.g., "it" for Italian)
+        "x-twitter-active-user": "yes",  // Active user flag (usually "yes")
+        "x-client-transaction-id": "",  // Transaction ID for tracking requests
+        "Sec-Fetch-Dest": "empty",  // Security fetch destination (usually "empty")
+        "Sec-Fetch-Mode": "cors",  // Security fetch mode (usually "cors")
+        "Sec-Fetch-Site": "same-origin",  // Security fetch site (usually "same-origin")
+        "authorization": "",  // Bearer token for OAuth2 authentication
+        "Connection": "keep-alive"  // Connection type (usually "keep-alive")
+    },
+    "telegram_token": "",  // Your Telegram bot token
+    "telegram_chat_id": ""  // Your Telegram chat ID where you want to receive notifications
+}
